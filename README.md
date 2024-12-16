@@ -1,5 +1,11 @@
 ##sources
+part1
+
 https://www.youtube.com/watch?v=motLOioLJfg
+
+part2
+
+https://www.youtube.com/watch?v=O65lEiYkkbc
 
 https://cpp.training/
 

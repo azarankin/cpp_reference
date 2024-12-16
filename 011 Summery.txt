@@ -1,0 +1,4 @@
+Guideline: Separate concerns!
+Guideline: Design classes for easy change.
+Guideline: Design classes for easy extensions.
+Guideline: Design classes to be testable.

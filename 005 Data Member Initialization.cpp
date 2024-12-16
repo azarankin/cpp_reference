@@ -84,3 +84,5 @@ struct Widget6
   std::string s {"CppCon"}; // Initializing to "CppCon"
   int* pi {}; // Initializing to nullptr
 };
+
+
