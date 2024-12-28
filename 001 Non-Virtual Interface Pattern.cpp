@@ -24,7 +24,7 @@ public:
 class Derive : public Base
 {
 private:
- void VirtualMethod() override { std::cout << "Virtua Method Override - Derive\n"; }
+ void VirtualMethod() override { std::cout << "Virtual Method Override - Derive\n"; }
 };
 
 int main()

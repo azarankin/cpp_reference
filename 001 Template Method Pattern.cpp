@@ -76,3 +76,37 @@ bool PersistenceInterface::write( const Blob& blob )
  return success;
 }
 
+
+
+class FilePersistence : public PersistenceInterface {
+private:
+    bool prepperWrite() override {
+        LOG_INFO("Preparing to write to file...");
+        // File-specific preparation logic
+        return true;
+    }
+
+    bool doWrite(const Blob& blob) override {
+        LOG_INFO("Writing blob to file...");
+        // File-specific writing logic
+        return true; // Simulate success
+    }
+
+    bool doWrite(const Blob& blob, WriteCallback callback) override {
+        LOG_INFO("Writing blob to file with callback...");
+        // File-specific writing logic with callback
+        return true;
+    }
+
+    bool doRead(Blob& blob, uint timeout) override {
+        LOG_INFO("Reading blob from file...");
+        // File-specific reading logic
+        return true; // Simulate success
+    }
+
+    bool doRead(Blob& blob, ReadCallback callback, uint timeout) override {
+        LOG_INFO("Reading blob from file with callback...");
+        // File-specific reading logic with callback
+        return true;
+    }
+};

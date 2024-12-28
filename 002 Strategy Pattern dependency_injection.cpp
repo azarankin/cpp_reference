@@ -65,7 +65,7 @@ class DrawSquareStrategy {
 public:
  virtual ~DrawSquareStrategy() = default;
 
- virtual void draw(const Square& square) const = 0; // Draw Circle by reference
+ virtual void draw(const Square&) const = 0; // Draw Circle by reference
 };
 
 

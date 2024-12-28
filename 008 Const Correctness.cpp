@@ -22,7 +22,7 @@ public:
   //less display the pointer in the code, encapsulate the details
   using iterator = Type*;
   using const_iterator = const Type*;
-  const_iteratpr begin() const noexcept;
+  const_iterator begin() const noexcept;
   iterator begin() const noexcept;
   const_iterator end() const noexcept;
 
