@@ -5,6 +5,23 @@
 * Interface Segregation Principle: A class should not implement interfaces it does not need.
 * Dependency Inversion Principle: High-level modules should not depend on low-level modules but rather on abstractions.
 
+
+
+עקרון האחריות היחידה* (Single Responsibility Principle): כל מחלקה אחראית ליישום פונקציה או אלגוריתם אחד בלבד.
+עקרון פתוח/סגור* (Open/Closed Principle): מחלקה ומתודות שלה צריכות להיות פתוחות להרחבה אך סגורות לשינויים.
+עקרון החלפת ליסקוב* (Liskov Substitution Principle): החלפת אובייקט אב באובייקט בן לא תפגע בהתנהגות התוכנית.
+עקרון הפרדת ממשקים* (Interface Segregation Principle): מחלקה לא תממש ממשקים שהיא אינה זקוקה להם.
+עקרון היפוך תלות* (Dependency Inversion Principle): מודולים ברמה גבוהה לא יהיו תלויים במודולים ברמה נמוכה, אלא באבסטרקציות.
+
+
+
+
+
+
+
+
+
+
 * עקרון האחריות היחידה (Single Responsibility Principle): כל מחלקה אחראית ליישום פונקציה או אלגוריתם אחד בלבד.
 *
 *
