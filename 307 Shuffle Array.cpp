@@ -10,8 +10,8 @@ void shuffleArray(std::vector<int>& arr)
 
     for (int i = n - 1; i > 0; --i)
     {
-        int j = std::rand() % (i + 1); // בחר אינדקס אקראי בין 0 ל-i
-        std::swap(arr[i], arr[j]);    // החלף את האיבר הנוכחי עם האיבר האקראי
+        int j = std::rand() % (i + 1); // j =  0 > i
+        std::swap(arr[i], arr[j]);    // replace the next place with the random number
     }
 }
 

@@ -1,5 +1,36 @@
 
 
+#include <iostream>
+#include <vector>
+#include <memory>
+#include <algorithm>
+
+//example to make movable and not copyable resource
+std::unique_ptr<std::vector<int>> Foo(std::unique_ptr<std::vector<int>> pv)
+{
+	std::ranges::reverse(*pv);
+	return pv; //keep the unique pinter
+}
+
+
+
+int main()
+{
+	auto up{std::make_unique<std::vector<int>>(std::initializer_list<int>{1, 2, 3})};
+	//made by "new "  "make_unique"
+	up = Foo(std::move(up));	//unique pointer returned back to action
+
+	//unique ptr transfer the pointer and avoid sharing
+	//also applied in dependency injection
+	
+
+	return 0;
+}
+
+
+
+
+
 template <typename T>
 class UniquePtr {
 private:

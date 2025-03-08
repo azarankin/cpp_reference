@@ -24,21 +24,21 @@ public:
             return;
         }
 
-        Node* temp = head;
-        while (temp->next != nullptr)
+        Node* current = head;
+        while (current->next != nullptr)
         {
-            temp = temp->next;
+            current = current->next;
         }
-        temp->next = newNode;
+        current->next = newNode;
     }
 
     void printList() const
     {
-        Node* temp = head;
-        while (temp != nullptr)
+        Node* current = head;
+        while (current != nullptr)
         {
-            std::cout << temp->data << " -> ";
-            temp = temp->next;
+            std::cout << current->data << " -> ";
+            current = current->next;
         }
         std::cout << "nullptr" << std::endl;
     }
@@ -101,9 +101,9 @@ public:
     ~LinkedList() {
         while (head != nullptr)
         {
-            Node* temp = head;
+            Node* current = head;
             head = head->next;
-            delete temp;
+            delete current;
         }
     }
 };
