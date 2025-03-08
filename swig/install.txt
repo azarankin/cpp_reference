@@ -1,0 +1,11 @@
+
+https://www.youtube.com/watch?v=Dct-sVGXvic&ab_channel=MarekKolman
+
+swig, download and set the envirunment variables
+https://www.swig.org/download.html
+
+https://winlibs.com/#download-release
+
+swig -python example.i
+gcc -c example.c example_wrap.c -IC:\Users\Arthur-Windows\AppData\Local\Programs\Python\Python313\include
+gcc -shared example.o example_wrap.o -o _example.pyd -LC:\Users\Arthur-Windows\AppData\Local\Programs\Python\Python313\libs -lpython313

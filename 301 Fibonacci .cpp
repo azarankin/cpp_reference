@@ -1,10 +1,13 @@
+#include<exception>
+
 int Fib(int n)
 {
 	if (n < 0) throw exception();
 	if (n == 0 || n == 1) return n;
 	int current = 1, previous = 0, temp;
 	for (int i{ 2 }; i <= n + 1; ++i) {
-		temp = previous;
+		//moving one forward
+		temp = current;
 		current = current + previous;
 		previous = temp;
 	}
