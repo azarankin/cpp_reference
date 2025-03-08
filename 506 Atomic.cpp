@@ -3,15 +3,21 @@
 #include <thread>
 #include <vector>
 
+
+
+
+
 std::atomic<int> counter(0); // Atomic counter initialized to 0
 
 void increment()
 {
+    //counter = 50;
+    counter.store(50, std::memory_order_relaxed); //change the value
     for (int i = 0; i < 1000; ++i) 
     {
-        counter += 1;
-        counter.fetch_add(1, std::memory_order_relaxed); // Atomic increment
-        //counter.store()
+        counter += 1;   //counter.fetch_add(1, std::memory_order_seq_cst);  //stronger (with Memory Barrier)
+        counter.fetch_add(1, std::memory_order_relaxed); // Atomic increment, (no Memory Barrier)
+        
     }
 }
 
@@ -79,7 +85,7 @@ std::atomic<int> seed(42); // Thread-safe seed
 void generate_random_numbers()
 {
     int local_seed = seed.fetch_add(1, std::memory_order_relaxed); // Unique seed for each thread
-    std::mt19937 generator(local_seed);
+    std::mt19937 generator(local_seed /*43*/); //ramdom number
     std::cout << "Random number: " << generator() << '\n';
 }
 

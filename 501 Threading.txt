@@ -1,0 +1,2 @@
+multi threading approach:
+    https://medium.com/codex/parallelizing-ml-dl-models-inference-on-both-cpu-and-gpu-bdc3d0d2e2a
